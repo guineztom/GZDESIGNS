@@ -2,7 +2,7 @@ backend:
   name: github
   repo: guineztom/GZDESIGNS
   branch: main
-  base_url: https://decapcms.org
+  base_url: https://gzdesigns.pages.dev/
 
 media_folder: "images"
 public_folder: "/images"
