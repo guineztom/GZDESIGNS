@@ -2,6 +2,7 @@ backend:
   name: github
   repo: guineztom/GZDESIGNS
   branch: main
+  base_url: cms-auth.guinez-tom.workers.dev
   
 media_folder: "images"
 public_folder: "/images"
