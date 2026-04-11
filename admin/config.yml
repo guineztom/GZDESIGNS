@@ -1,0 +1,123 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Pour Cloudflare Pages sans GitHub : utilise "local" backend en dev
+# En production avec GitHub + Cloudflare Pages, utilise git-gateway ci-dessus
+# Alternative sans GitHub : utilise Netlify Identity ou Cloudflare Access
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Contenu du site"
+    files:
+
+      - name: "hero"
+        label: "Section Hero (en-tête)"
+        file: "content/hero.json"
+        fields:
+          - {label: "Tag (petite ligne au-dessus)", name: "tag", widget: "string", default: "Création & refonte de site web · Lyon"}
+          - {label: "Titre ligne 1", name: "h1_1", widget: "string", default: "Un site qui"}
+          - {label: "Titre ligne 2", name: "h1_2", widget: "string", default: "donne envie,"}
+          - {label: "Titre ligne 3 (italique violet)", name: "h1_3", widget: "string", default: "livré vite."}
+          - {label: "Sous-titre", name: "subline", widget: "text", default: "Restaurants, boutiques, cabinets, clubs — je crée des sites soignés, pensés pour vos clients, à un prix que vous n'attendez pas."}
+          - {label: "Texte badge 1 (vitesse)", name: "badge1_title", widget: "string", default: "Livré en 48h"}
+          - {label: "Sous-texte badge 1", name: "badge1_sub", widget: "string", default: "pour les one-pagers"}
+          - {label: "Texte badge 2 (prix)", name: "badge2_title", widget: "string", default: "À partir de 99€"}
+          - {label: "Sous-texte badge 2", name: "badge2_sub", widget: "string", default: "tout compris"}
+
+      - name: "process"
+        label: "Section Process (4 étapes)"
+        file: "content/process.json"
+        fields:
+          - {label: "Titre section", name: "title", widget: "string", default: "Simple du début à la fin."}
+          - {label: "Sous-titre", name: "subtitle", widget: "text", default: "Pas de jargon, pas de réunion interminable. Vous me parlez de votre activité, je m'occupe du reste."}
+          - label: "Étapes"
+            name: "steps"
+            widget: "list"
+            fields:
+              - {label: "Numéro et nom", name: "num", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+
+      - name: "why"
+        label: "Section Pourquoi GZ Designs"
+        file: "content/why.json"
+        fields:
+          - {label: "Titre", name: "title", widget: "string", default: "Ce que vous obtenez vraiment."}
+          - {label: "Texte", name: "text", widget: "text"}
+          - label: "Cartes (4 arguments)"
+            name: "cards"
+            widget: "list"
+            fields:
+              - {label: "Titre carte", name: "title", widget: "string"}
+              - {label: "Texte carte", name: "text", widget: "text"}
+
+      - name: "pricing"
+        label: "Tarifs"
+        file: "content/pricing.json"
+        fields:
+          - {label: "Titre section", name: "title", widget: "string", default: "Création, refonte ou projet sur-mesure."}
+          - {label: "Sous-titre", name: "subtitle", widget: "text"}
+          - label: "Formule 1 — Refonte"
+            name: "plan1"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "name", widget: "string", default: "Refonte"}
+              - {label: "Prix (€)", name: "price", widget: "number", default: 99}
+              - {label: "Description", name: "desc", widget: "text"}
+          - label: "Formule 2 — Création (mise en avant)"
+            name: "plan2"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "name", widget: "string", default: "Création"}
+              - {label: "Prix (€)", name: "price", widget: "number", default: 149}
+              - {label: "Description", name: "desc", widget: "text"}
+          - label: "Formule 3 — Sur-mesure"
+            name: "plan3"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "name", widget: "string", default: "Sur-mesure"}
+              - {label: "Prix (€)", name: "price", widget: "number", default: 299}
+              - {label: "Description", name: "desc", widget: "text"}
+          - label: "Modifications ponctuelles — 3 niveaux"
+            name: "maint"
+            widget: "list"
+            fields:
+              - {label: "Nom", name: "name", widget: "string"}
+              - {label: "Prix (€)", name: "price", widget: "number"}
+              - {label: "Description", name: "desc", widget: "text"}
+
+      - name: "faq"
+        label: "FAQ"
+        file: "content/faq.json"
+        fields:
+          - label: "Questions / Réponses"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "q", widget: "string"}
+              - {label: "Réponse", name: "a", widget: "text"}
+
+      - name: "contact"
+        label: "Section Contact"
+        file: "content/contact.json"
+        fields:
+          - {label: "Titre", name: "title", widget: "string", default: "On parle de votre projet ?"}
+          - {label: "Sous-titre", name: "subtitle", widget: "text"}
+          - {label: "ID Formspree (ex: xbjnkpqr)", name: "formspree_id", widget: "string", hint: "Créez un compte sur formspree.io et copiez votre form ID ici"}
+          - label: "Pills de réassurance"
+            name: "pills"
+            widget: "list"
+            field: {label: "Texte", name: "text", widget: "string"}
+
+      - name: "meta"
+        label: "SEO & Métadonnées"
+        file: "content/meta.json"
+        fields:
+          - {label: "Titre de la page (balise title)", name: "title", widget: "string", default: "Création site web Lyon pas cher | GZ Designs — à partir de 99€"}
+          - {label: "Meta description", name: "description", widget: "text", default: "Création de site web et refonte pour restaurants, commerces et indépendants à Lyon. Sites professionnels livrés en 48h à partir de 99€. Devis gratuit."}
+          - {label: "URL du site (ex: https://gzdesigns.fr)", name: "site_url", widget: "string"}
+          - {label: "Ville principale (pour le SEO local)", name: "city", widget: "string", default: "Lyon"}

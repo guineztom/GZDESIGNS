@@ -1,0 +1,12 @@
+{
+  "title": "Création, refonte ou projet sur-mesure.",
+  "subtitle": "Trois formules selon où vous en êtes.",
+  "plan1": {"name": "Refonte", "price": 99, "desc": "Votre site date, il est lent, ou il ne vous ressemble plus. On repart du design à zéro avec votre contenu existant."},
+  "plan2": {"name": "Création", "price": 149, "desc": "Vous partez de rien. Je crée votre site de A à Z — design, textes, mise en ligne — en moins d'une semaine."},
+  "plan3": {"name": "Sur-mesure", "price": 299, "desc": "Vous avez un brief précis, plusieurs pages, des besoins spécifiques. On prend le temps de bien faire."},
+  "maint": [
+    {"name": "Retouche rapide", "price": 19, "desc": "Texte à changer, photo à remplacer, lien à corriger — livré sous 24h."},
+    {"name": "Ajout de contenu", "price": 49, "desc": "Une nouvelle section, une galerie, un formulaire ou une page événement."},
+    {"name": "Évolution du site", "price": 99, "desc": "Un redesign partiel, une nouvelle page complète ou une fonctionnalité inédite."}
+  ]
+}
