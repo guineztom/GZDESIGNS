@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: guineztom/GZDESIGNS
+  base_url: https://api.decapcms.org
 
 # Pour Cloudflare Pages sans GitHub : utilise "local" backend en dev
 # En production avec GitHub + Cloudflare Pages, utilise git-gateway ci-dessus
