@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: guineztom/GZDESIGNS
 
 # Pour Cloudflare Pages sans GitHub : utilise "local" backend en dev
 # En production avec GitHub + Cloudflare Pages, utilise git-gateway ci-dessus
