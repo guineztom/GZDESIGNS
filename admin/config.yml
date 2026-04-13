@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: guineztom/GZDESIGNS
+  name: git-gateway
   branch: main
-  base_url: cms-auth.guinez-tom.workers.dev
-  
-media_folder: "images"
+
+# Dossiers pour les images
+media_folder: "public/images"
 public_folder: "/images"
 
 collections:
@@ -12,41 +11,116 @@ collections:
     label: "Contenu du site"
     files:
 
+      # --- SECTION HERO ---
       - name: "hero"
-        label: "Section Hero"
+        label: "Section Hero (en-tête)"
         file: "content/hero.json"
         fields:
-          - {label: "Tag", name: "tag", widget: "string"}
+          - {label: "Tag (petite ligne)", name: "tag", widget: "string"}
           - {label: "Titre ligne 1", name: "h1_1", widget: "string"}
           - {label: "Titre ligne 2", name: "h1_2", widget: "string"}
-          - {label: "Titre ligne 3 (violet)", name: "h1_3", widget: "string"}
+          - {label: "Titre ligne 3 (italique)", name: "h1_3", widget: "string"}
           - {label: "Sous-titre", name: "subline", widget: "text"}
-          - {label: "Badge 1 titre", name: "badge1_title", widget: "string"}
-          - {label: "Badge 1 sous-titre", name: "badge1_sub", widget: "string"}
-          - {label: "Badge 2 titre", name: "badge2_title", widget: "string"}
-          - {label: "Badge 2 sous-titre", name: "badge2_sub", widget: "string"}
+          - {label: "Texte badge 1", name: "badge1_title", widget: "string"}
+          - {label: "Sous-texte badge 1", name: "badge1_sub", widget: "string"}
+          - {label: "Texte badge 2", name: "badge2_title", widget: "string"}
+          - {label: "Sous-texte badge 2", name: "badge2_sub", widget: "string"}
 
+      # --- SECTION TARGETS (Basé sur targets.json) ---
+      - name: "targets"
+        label: "Cibles (Pour qui)"
+        file: "content/targets.json"
+        fields:
+          - {label: "Label section", name: "label", widget: "string"}
+          - label: "Liste des métiers"
+            name: "items"
+            widget: "list"
+            field: {label: "Métier", name: "item", widget: "string"}
+
+      # --- SECTION PROCESS (Basé sur process.json) ---
+      - name: "process"
+        label: "Section Process (4 étapes)"
+        file: "content/process.json"
+        fields:
+          - {label: "Label (petit)", name: "label", widget: "string"}
+          - {label: "Titre section", name: "title", widget: "string"}
+          - {label: "Sous-titre", name: "subtitle", widget: "text"}
+          - label: "Étapes"
+            name: "steps"
+            widget: "list"
+            fields:
+              - {label: "Numéro et nom", name: "num", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+
+      # --- SECTION WHY (Basé sur why.json) ---
+      - name: "why"
+        label: "Section Pourquoi GZ Designs"
+        file: "content/why.json"
+        fields:
+          - {label: "Label (petit)", name: "label", widget: "string"}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Texte intro", name: "text", widget: "text"}
+          - {label: "Texte bouton CTA", name: "cta", widget: "string"}
+          - label: "Cartes (4 arguments)"
+            name: "cards"
+            widget: "list"
+            fields:
+              - {label: "Icône", name: "icon", widget: "string", hint: "lightning, layers, shield, edit"}
+              - {label: "Titre carte", name: "title", widget: "string"}
+              - {label: "Texte carte", name: "text", widget: "text"}
+
+      # --- SECTION REALISATIONS (Basé sur realisations.json) ---
+      - name: "realisations"
+        label: "Réalisations (Portfolio)"
+        file: "content/realisations.json"
+        fields:
+          - {label: "Label (petit)", name: "label", widget: "string"}
+          - {label: "Titre section", name: "title", widget: "string"}
+          - {label: "Sous-titre", name: "subtitle", widget: "text"}
+          - label: "Projets"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Nom du client", name: "name", widget: "string"}
+              - {label: "Lien (URL)", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Texte alternatif image", name: "alt", widget: "string"}
+              - {label: "Catégorie (Tag)", name: "tag", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Badge (Prix/Type)", name: "badge", widget: "string"}
+
+      # --- SECTION CTA BANNER (Basé sur cta.json) ---
+      - name: "cta_banner"
+        label: "Bannière CTA (Fin de page)"
+        file: "content/cta.json"
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Sous-titre", name: "subtitle", widget: "string"}
+          - {label: "Texte bouton", name: "cta", widget: "string"}
+
+      # --- SECTION PRICING (Fidèle à ton config initial) ---
       - name: "pricing"
         label: "Tarifs"
         file: "content/pricing.json"
         fields:
           - {label: "Titre section", name: "title", widget: "string"}
           - {label: "Sous-titre", name: "subtitle", widget: "text"}
-          - label: "Formule Refonte"
+          - label: "Formule 1 — Refonte"
             name: "plan1"
             widget: "object"
             fields:
               - {label: "Nom", name: "name", widget: "string"}
               - {label: "Prix (€)", name: "price", widget: "number"}
               - {label: "Description", name: "desc", widget: "text"}
-          - label: "Formule Création"
+          - label: "Formule 2 — Création"
             name: "plan2"
             widget: "object"
             fields:
               - {label: "Nom", name: "name", widget: "string"}
               - {label: "Prix (€)", name: "price", widget: "number"}
               - {label: "Description", name: "desc", widget: "text"}
-          - label: "Formule Sur-mesure"
+          - label: "Formule 3 — Sur-mesure"
             name: "plan3"
             widget: "object"
             fields:
@@ -61,10 +135,15 @@ collections:
               - {label: "Prix (€)", name: "price", widget: "number"}
               - {label: "Description", name: "desc", widget: "text"}
 
+      # --- SECTION FAQ (Basé sur faq.json) ---
       - name: "faq"
         label: "FAQ"
         file: "content/faq.json"
         fields:
+          - {label: "Label (petit)", name: "label", widget: "string"}
+          - {label: "Titre section", name: "title", widget: "string"}
+          - {label: "Sous-titre", name: "subtitle", widget: "text"}
+          - {label: "Texte bouton CTA", name: "cta", widget: "string"}
           - label: "Questions / Réponses"
             name: "items"
             widget: "list"
@@ -72,22 +151,39 @@ collections:
               - {label: "Question", name: "q", widget: "string"}
               - {label: "Réponse", name: "a", widget: "text"}
 
+      # --- SECTION CONTACT (Basé sur contact.json) ---
       - name: "contact"
-        label: "Contact"
+        label: "Section Contact"
         file: "content/contact.json"
         fields:
           - {label: "Titre", name: "title", widget: "string"}
           - {label: "Sous-titre", name: "subtitle", widget: "text"}
           - {label: "ID Formspree", name: "formspree_id", widget: "string"}
-          - label: "Pills"
+          - label: "Pills de réassurance"
             name: "pills"
             widget: "list"
             field: {label: "Texte", name: "text", widget: "string"}
 
+      # --- SECTION FOOTER (Basé sur footer.json) ---
+      - name: "footer"
+        label: "Pied de page"
+        file: "content/footer.json"
+        fields:
+          - {label: "Texte Logo", name: "logo", widget: "string"}
+          - {label: "Copyright", name: "copy", widget: "string"}
+          - label: "Liens de navigation"
+            name: "links"
+            widget: "list"
+            fields:
+              - {label: "Libellé", name: "label", widget: "string"}
+              - {label: "Lien (ex: #tarifs)", name: "href", widget: "string"}
+
+      # --- SEO & META (Basé sur meta.json) ---
       - name: "meta"
-        label: "SEO"
+        label: "SEO & Métadonnées"
         file: "content/meta.json"
         fields:
-          - {label: "Titre page", name: "title", widget: "string"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
           - {label: "Meta description", name: "description", widget: "text"}
           - {label: "URL du site", name: "site_url", widget: "string"}
+          - {label: "Ville (SEO local)", name: "city", widget: "string"}
