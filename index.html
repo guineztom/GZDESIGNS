@@ -3,77 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO — rempli dynamiquement par meta.json -->
   <title>GZ Designs</title>
   <meta name="description" content="">
-  <meta name="keywords" content="création site web Lyon, refonte site internet Lyon, site web restaurant Lyon, site web commerce Lyon, site web pas cher Lyon, webdesign Lyon">
-  <link rel="canonical" href="https://gzdesigns.fr/">
+  <link rel="canonical" href="">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-
-  <!-- SCHEMA.ORG -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "GZ Designs",
-    "description": "Création de sites web pour restaurants, commerces et indépendants à Lyon. À partir de 99€.",
-    "url": "https://gzdesigns.fr",
-    "areaServed": [{"@type": "City", "name": "Lyon"}, {"@type": "Country", "name": "France"}],
-    "serviceType": ["Création de site web", "Refonte de site internet", "Webdesign"],
-    "priceRange": "€"
-  }
-  </script>
-
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script type="application/ld+json" id="schema-org"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
-
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --v:#5B21B6;--vl:#7C3AED;--vp:#F0EDFB;--vpp:#FAF8FF;
-      --ink:#111010;--ink2:#2D2D2D;--ink3:#5C5C5C;--ink4:#999;--ink5:#C8C8C8;
-      --bg:#FFFFFF;--bg2:#F7F6F3;--bg3:#EFEDE8;--border:#E5E3DE;
-      --f:'Figtree',system-ui,sans-serif;--r:16px;--rl:20px
-    }
+    :root{--v:#5B21B6;--vl:#7C3AED;--vp:#F0EDFB;--vpp:#FAF8FF;--ink:#111010;--ink2:#2D2D2D;--ink3:#5C5C5C;--ink4:#999;--ink5:#C8C8C8;--bg:#FFFFFF;--bg2:#F7F6F3;--bg3:#EFEDE8;--border:#E5E3DE;--f:'Figtree',system-ui,sans-serif}
     html{scroll-behavior:smooth}
     body{font-family:var(--f);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
-
-    /* NAV */
-    nav{background:rgba(255,255,255,0.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1060px;margin:0 auto;padding:0 28px}
-    .logo{font-size:21px;font-weight:900;letter-spacing:-.5px}
-    .logo span{color:var(--v)}
-    .nav-links{display:flex;gap:28px}
-    .nav-links a{font-size:14px;font-weight:500;color:var(--ink3)}
-    .nav-links a:hover{color:var(--ink)}
-    .nav-cta{background:var(--v);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:var(--f);transition:.15s}
-    .nav-cta:hover{background:var(--vl)}
-    @media(max-width:640px){.nav-links{display:none}}
-
-    /* LAYOUT */
     .c{max-width:1060px;margin:0 auto;padding:0 28px}
     section{padding:88px 0}
     .sec-alt{background:var(--bg2)}
     .label{font-size:11px;font-weight:700;color:var(--v);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:12px}
     .h2{font-size:clamp(30px,4.5vw,48px);font-weight:900;line-height:1.05;letter-spacing:-1.5px;color:var(--ink);margin-bottom:16px}
     .lead{font-size:17px;color:var(--ink3);line-height:1.75;max-width:520px}
-
-    /* BUTTONS */
     .btn{display:inline-block;padding:13px 26px;border-radius:100px;font-size:15px;font-weight:700;cursor:pointer;border:none;font-family:var(--f);transition:.15s}
     .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--v)}
     .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--border)}.btn-ghost:hover{border-color:var(--ink)}
     .btn-v{background:var(--v);color:#fff}.btn-v:hover{background:var(--vl)}
-
-    /* HERO */
+    nav{background:rgba(255,255,255,0.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1060px;margin:0 auto;padding:0 28px}
+    .logo{font-size:21px;font-weight:900;letter-spacing:-.5px}.logo b{color:var(--v)}
+    .nav-links{display:flex;gap:28px}.nav-links a{font-size:14px;font-weight:500;color:var(--ink3)}.nav-links a:hover{color:var(--ink)}
+    .nav-cta{background:var(--v);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:var(--f);transition:.15s}.nav-cta:hover{background:var(--vl)}
+    @media(max-width:640px){.nav-links{display:none}}
     #hero{padding:80px 0 72px;border-bottom:1px solid var(--border)}
     .hero-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
     @media(max-width:760px){.hero-layout{grid-template-columns:1fr;gap:36px}}
     .hero-tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--v);background:var(--vp);border:1px solid #DDD6FE;padding:5px 14px;border-radius:100px;margin-bottom:22px}
-    .htdot{width:5px;height:5px;background:var(--v);border-radius:50%}
+    .htdot{width:5px;height:5px;background:var(--v);border-radius:50%;flex-shrink:0}
     .hero-h1{font-size:clamp(38px,6vw,68px);font-weight:900;line-height:1.03;letter-spacing:-2.5px;color:var(--ink);margin-bottom:22px}
     .hero-h1 i{font-style:italic;color:var(--v)}
     .hero-p{font-size:17px;color:var(--ink3);line-height:1.75;max-width:460px;margin-bottom:32px}
@@ -82,35 +49,26 @@
     .hero-img{border-radius:18px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;background:var(--bg2)}
     .hero-img img{width:100%;height:100%;object-fit:cover}
     .hf{position:absolute;background:#fff;border:1px solid var(--border);border-radius:14px;padding:13px 16px;display:flex;gap:10px;align-items:center}
-    .hf1{bottom:-14px;left:-14px}
-    .hf2{top:-14px;right:-14px}
+    .hf1{bottom:-14px;left:-14px}.hf2{top:-14px;right:-14px}
     .hfi{width:34px;height:34px;border-radius:9px;background:var(--vp);display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .hfi svg{width:16px;height:16px;stroke:var(--v);fill:none;stroke-width:2.5}
-    .hft{font-size:13px;font-weight:700;color:var(--ink)}
-    .hfs{font-size:12px;color:var(--ink4);margin-top:1px}
-
-    /* TARGETS */
+    .hft{font-size:13px;font-weight:700;color:var(--ink)}.hfs{font-size:12px;color:var(--ink4);margin-top:1px}
     .targets{background:var(--bg2);border-bottom:1px solid var(--border);padding:22px 0}
     .ti{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
     .tsep{width:1px;height:14px;background:var(--border)}
     .tlbl{font-size:11px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:1px}
     .tchip{font-size:13px;font-weight:600;color:var(--ink2)}
-
-    /* PROCESS */
     .proc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-top:48px}
     .ps{background:var(--bg);padding:30px 26px}
     .pn{font-size:11px;font-weight:800;color:var(--v);letter-spacing:1px;margin-bottom:14px}
     .pt{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.3px}
     .pd{font-size:14px;color:var(--ink3);line-height:1.65}
-
-    /* CAROUSEL */
     .carousel-outer{overflow:hidden;border-radius:18px;margin-top:48px}
     .carousel-track{display:flex;transition:transform .5s cubic-bezier(.77,0,.175,1)}
     .cslide{min-width:100%}
     .mock{background:var(--bg2);border:1px solid var(--border);border-radius:18px;overflow:hidden}
     .mock-bar{background:var(--bg3);padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
-    .mdots{display:flex;gap:5px}
-    .md{width:10px;height:10px;border-radius:50%}
+    .mdots{display:flex;gap:5px}.md{width:10px;height:10px;border-radius:50%}
     .murl{flex:1;background:#fff;border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:11px;color:var(--ink4);font-family:monospace;max-width:280px;margin:0 auto;text-align:center}
     .mock-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
     .mock-info{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
@@ -119,16 +77,13 @@
     .mi-desc{font-size:14px;color:var(--ink3);margin-top:4px}
     .mi-badge{font-size:12px;font-weight:700;background:var(--vp);color:var(--v);padding:4px 12px;border-radius:100px;border:1px solid #DDD6FE;white-space:nowrap}
     .cnav{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
-    .cdots{display:flex;gap:7px}
+    .cdots-wrap{display:flex;gap:7px}
     .cdot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:.2s}
     .cdot.on{background:var(--v);width:22px;border-radius:4px}
     .carrs{display:flex;gap:8px}
     .carr{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}
-    .carr:hover{border-color:var(--ink);background:var(--ink)}
-    .carr:hover svg{stroke:#fff}
+    .carr:hover{border-color:var(--ink);background:var(--ink)}.carr:hover svg{stroke:#fff}
     .carr svg{width:16px;height:16px;stroke:var(--ink3);fill:none;stroke-width:2.5}
-
-    /* WHY */
     .why-top{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:56px}
     @media(max-width:700px){.why-top{grid-template-columns:1fr;gap:28px}}
     .why-img{border-radius:18px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--border)}
@@ -139,13 +94,10 @@
     .wcard-ico svg{width:20px;height:20px;stroke:var(--v);fill:none;stroke-width:2}
     .wcard h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.3px}
     .wcard p{font-size:14px;color:var(--ink3);line-height:1.65}
-
-    /* PRICING */
     .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
     @media(max-width:680px){.plans{grid-template-columns:1fr}}
     .plan{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:28px;position:relative;transition:.15s}
-    .plan:hover{border-color:var(--ink4)}
-    .plan.mid{border:2px solid var(--v);background:var(--vpp)}
+    .plan:hover{border-color:var(--ink4)}.plan.mid{border:2px solid var(--v);background:var(--vpp)}
     .pbadge{position:absolute;top:-13px;left:24px;background:var(--v);color:#fff;font-size:11px;font-weight:800;padding:4px 14px;border-radius:100px}
     .pname{font-size:11px;font-weight:800;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
     .mid .pname{color:var(--v)}
@@ -159,8 +111,6 @@
     .pbtn{width:100%;padding:12px;border-radius:100px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--f);transition:.15s}
     .pbtn-out{background:transparent;color:var(--ink);border:1.5px solid var(--border)}.pbtn-out:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
     .pbtn-v{background:var(--v);color:#fff;border:1.5px solid var(--v)}.pbtn-v:hover{background:var(--vl)}
-
-    /* MAINTENANCE */
     .mcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
     @media(max-width:680px){.mcards{grid-template-columns:1fr}}
     .mc{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:22px}
@@ -168,8 +118,6 @@
     .mc p{font-size:14px;color:var(--ink3);line-height:1.6}
     .mc-price{font-size:24px;font-weight:900;color:var(--ink);margin:10px 0 4px;letter-spacing:-.5px}
     .mc-price span{font-size:14px;font-weight:500;color:var(--ink3)}
-
-    /* FAQ */
     .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
     @media(max-width:700px){.faq-grid{grid-template-columns:1fr}}
     .fitem{border-bottom:1px solid var(--border)}
@@ -179,8 +127,6 @@
     .fitem.open .fi{background:var(--v);border-color:var(--v);color:#fff;transform:rotate(45deg)}
     .fa{font-size:15px;color:var(--ink3);max-height:0;overflow:hidden;transition:max-height .32s ease,padding .32s ease;line-height:1.75}
     .fitem.open .fa{max-height:240px;padding-bottom:20px}
-
-    /* CONTACT */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
     @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
     form{display:flex;flex-direction:column;gap:13px}
@@ -195,21 +141,14 @@
     .form-ok{display:none;background:var(--vp);border:1px solid #DDD6FE;border-radius:11px;padding:18px;color:var(--v);font-size:15px;font-weight:600;text-align:center}
     .cpill{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:11px;margin-bottom:10px;font-size:14px;font-weight:600;color:var(--ink2)}
     .cpdot{width:7px;height:7px;border-radius:50%;background:var(--v);flex-shrink:0}
-
-    /* CTA BAND */
     .ctaband{background:var(--ink);padding:72px 0;text-align:center}
     .ctaband h2{font-size:clamp(26px,4vw,50px);font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.1}
     .ctaband p{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:32px}
-
-    /* FOOTER */
     footer{background:var(--bg2);border-top:1px solid var(--border);padding:36px 0}
     .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
     .flogo{font-size:18px;font-weight:900;color:var(--ink)}.flogo b{color:var(--v)}
-    .flinks{display:flex;gap:22px;flex-wrap:wrap}
-    .flinks a{font-size:13px;color:var(--ink3)}.flinks a:hover{color:var(--ink)}
+    .flinks{display:flex;gap:22px;flex-wrap:wrap}.flinks a{font-size:13px;color:var(--ink3)}.flinks a:hover{color:var(--ink)}
     .fcopy{font-size:13px;color:var(--ink4)}
-
-    /* ANIMATIONS */
     .rv{opacity:0;transform:translateY(28px);transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1)}
     .rl{opacity:0;transform:translateX(-28px);transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1)}
     .rr{opacity:0;transform:translateX(28px);transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1)}
@@ -218,480 +157,132 @@
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="logo">GZ<span>.</span>designs</a>
-    <div class="nav-links">
-      <a href="#comment">Notre approche</a>
-      <a href="#realisations">Réalisations</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="nav-cta" onclick="go('contact')">Démarrer un projet</button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="c">
-    <div class="hero-layout">
-      <div class="rv">
-        <div class="hero-tag"><span class="htdot"></span><span id="hero-tag"></span></div>
-        <h1 class="hero-h1">
-          <span id="hero-h1-1"></span><br>
-          <span id="hero-h1-2"></span><br>
-          <i id="hero-h1-3"></i>
-        </h1>
-        <p class="hero-p" id="hero-subline"></p>
-        <div class="hero-btns">
-          <button class="btn btn-dark" onclick="go('tarifs')">Voir les tarifs</button>
-          <button class="btn btn-ghost" onclick="go('realisations')">Exemples de sites</button>
-        </div>
-      </div>
-      <div class="rr">
-        <div class="hero-img-wrap">
-          <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&auto=format&fit=crop&q=80" alt="Création de site web professionnel à Lyon" width="900" height="675" loading="eager">
-          </div>
-          <div class="hf hf1">
-            <div class="hfi"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-            <div><div class="hft" id="hero-b1t"></div><div class="hfs" id="hero-b1s"></div></div>
-          </div>
-          <div class="hf hf2">
-            <div class="hfi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div><div class="hft" id="hero-b2t"></div><div class="hfs" id="hero-b2s"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TARGETS -->
-<div class="targets">
-  <div class="c">
-    <div class="ti">
-      <span class="tlbl">Pour qui</span>
-      <div class="tsep"></div>
-      <span class="tchip">Restaurants &amp; cafés</span>
-      <div class="tsep"></div>
-      <span class="tchip">Boutiques indépendantes</span>
-      <div class="tsep"></div>
-      <span class="tchip">Cavistes &amp; épiceries fines</span>
-      <div class="tsep"></div>
-      <span class="tchip">Cabinets &amp; libéraux</span>
-      <div class="tsep"></div>
-      <span class="tchip">Clubs de sport &amp; studios</span>
-      <div class="tsep"></div>
-      <span class="tchip">Artisans &amp; créateurs</span>
-    </div>
-  </div>
-</div>
-
-<!-- PROCESS -->
-<section id="comment">
-  <div class="c">
-    <div class="rv">
-      <div class="label">Comment ça se passe</div>
-      <h2 class="h2">Simple du début à la fin.</h2>
-      <p class="lead">Pas de jargon, pas de réunion interminable. Vous me parlez de votre activité, je m'occupe du reste.</p>
-    </div>
-    <div class="proc-grid">
-      <div class="ps rv d1">
-        <div class="pn">01 — Brief</div>
-        <div class="pt">On se parle</div>
-        <p class="pd">Un échange rapide par email ou en visio pour comprendre votre activité, vos clients, ce que vous voulez transmettre.</p>
-      </div>
-      <div class="ps rv d2">
-        <div class="pn">02 — Design</div>
-        <div class="pt">Je conçois</div>
-        <p class="pd">Je crée un design pensé pour votre secteur et votre clientèle. Pas un template générique — quelque chose qui vous ressemble.</p>
-      </div>
-      <div class="ps rv d3">
-        <div class="pn">03 — Révisions</div>
-        <div class="pt">Vous validez</div>
-        <p class="pd">Vous donnez votre avis, on ajuste. Sur les formules Création et Sur-mesure, on a plusieurs allers-retours pour peaufiner.</p>
-      </div>
-      <div class="ps rv d4">
-        <div class="pn">04 — Mise en ligne</div>
-        <div class="pt">C'est en ligne</div>
-        <p class="pd">Votre domaine est connecté, le site est en ligne. Je vous montre comment mettre à jour vos contenus seul si vous le souhaitez.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RÉALISATIONS -->
-<section id="realisations" class="sec-alt">
-  <div class="c">
-    <div class="rv">
-      <div class="label">Réalisations</div>
-      <h2 class="h2">Des sites pour des vraies activités.</h2>
-      <p class="lead">Chaque projet part de zéro — du design jusqu'à la mise en ligne.</p>
-    </div>
-    <div class="rv">
-      <div class="carousel-outer">
-        <div class="carousel-track" id="track">
-          <div class="cslide"><div class="mock">
-            <div class="mock-bar"><div class="mdots"><div class="md" style="background:#FF5F56"></div><div class="md" style="background:#FFBD2E"></div><div class="md" style="background:#27C93F"></div></div><div class="murl">lebarrettolyon.fr</div></div>
-            <img class="mock-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&auto=format&fit=crop&q=80" alt="Site web restaurant Lyon" loading="lazy">
-            <div class="mock-info"><div><div class="mi-tag">Restaurant</div><div class="mi-name">Le Barreto — Lyon 2<sup>e</sup></div><div class="mi-desc">One-pager avec menu, réservation en ligne et accès Google Maps intégré</div></div><div class="mi-badge">Création · 149€</div></div>
-          </div></div>
-          <div class="cslide"><div class="mock">
-            <div class="mock-bar"><div class="mdots"><div class="md" style="background:#FF5F56"></div><div class="md" style="background:#FFBD2E"></div><div class="md" style="background:#27C93F"></div></div><div class="murl">studiofightclub.fr</div></div>
-            <img class="mock-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80" alt="Site web salle de sport Lyon" loading="lazy">
-            <div class="mock-info"><div><div class="mi-tag">Salle de sport</div><div class="mi-name">Studio Fight Club — Lyon 7<sup>e</sup></div><div class="mi-desc">Site avec planning cours, formules d'abonnement et prise de contact</div></div><div class="mi-badge">Sur-mesure · 299€</div></div>
-          </div></div>
-          <div class="cslide"><div class="mock">
-            <div class="mock-bar"><div class="mdots"><div class="md" style="background:#FF5F56"></div><div class="md" style="background:#FFBD2E"></div><div class="md" style="background:#27C93F"></div></div><div class="murl">maison-del-barber.fr</div></div>
-            <img class="mock-img" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&auto=format&fit=crop&q=80" alt="Site web barber shop Lyon" loading="lazy">
-            <div class="mock-info"><div><div class="mi-tag">Barber Shop</div><div class="mi-name">Maison Del Barber — Lyon 6<sup>e</sup></div><div class="mi-desc">Refonte complète avec réservation en ligne et galerie de prestations</div></div><div class="mi-badge">Refonte · 99€</div></div>
-          </div></div>
-          <div class="cslide"><div class="mock">
-            <div class="mock-bar"><div class="mdots"><div class="md" style="background:#FF5F56"></div><div class="md" style="background:#FFBD2E"></div><div class="md" style="background:#27C93F"></div></div><div class="murl">caviste-lescarres.fr</div></div>
-            <img class="mock-img" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&fit=crop&q=80" alt="Site web caviste Lyon" loading="lazy">
-            <div class="mock-info"><div><div class="mi-tag">Caviste</div><div class="mi-name">Les Carrés — Lyon 3<sup>e</sup></div><div class="mi-desc">Vitrine avec catalogue vins, agenda événements et formulaire de contact</div></div><div class="mi-badge">Sur-mesure · 299€</div></div>
-          </div></div>
-        </div>
-      </div>
-      <div class="cnav">
-        <div class="cdots" id="cdots"></div>
-        <div class="carrs">
-          <button class="carr" id="cprev" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button class="carr" id="cnext" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POURQUOI -->
-<section class="sec-alt" style="background:var(--bg2)">
-  <div class="c">
-    <div class="why-top">
-      <div class="rl">
-        <div class="label">Pourquoi GZ Designs</div>
-        <h2 class="h2">Ce que vous<br>obtenez vraiment.</h2>
-        <p class="lead" style="margin-bottom:28px">Un site pensé pour vos clients, pas pour impressionner des jurys de design. Rapide à charger, facile à trouver sur Google, et que vous pouvez mettre à jour seul.</p>
-        <button class="btn btn-dark" onclick="go('contact')">Parler de mon projet</button>
-      </div>
-      <div class="rr">
-        <div class="why-img">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&auto=format&fit=crop&q=80" alt="Webdesign professionnel Lyon" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <div class="why-cards">
-      <div class="wcard rv d1">
-        <div class="wcard-ico"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-        <h3>Rapide à charger</h3>
-        <p>Pas de constructeur de pages ni de plugins inutiles. Du code propre qui charge vite — vos visiteurs ne partent pas avant d'avoir vu votre contenu.</p>
-      </div>
-      <div class="wcard rv d2">
-        <div class="wcard-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>Votre identité, pas un template</h3>
-        <p>Chaque site part de votre brief, de vos couleurs, de votre ton. Le résultat vous ressemble — et ça se voit au premier coup d'œil.</p>
-      </div>
-      <div class="wcard rv d3">
-        <div class="wcard-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Hébergement fiable inclus</h3>
-        <p>Votre site est hébergé sur une infrastructure stable, sécurisée, et gratuite pour vous. Pas de frais cachés, pas de panne inexpliquée.</p>
-      </div>
-      <div class="wcard rv d4">
-        <div class="wcard-ico"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-        <h3>Autonomie après livraison</h3>
-        <p>Vos horaires changent, vous ajoutez un plat, vous annoncez un événement — vous le faites vous-même, depuis n'importe quel appareil, sans m'appeler.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="tarifs">
-  <div class="c">
-    <div class="rv" style="text-align:center;margin-bottom:8px">
-      <div class="label">Tarifs</div>
-      <h2 class="h2" id="pricing-title"></h2>
-      <p class="lead" style="margin:0 auto" id="pricing-subtitle"></p>
-    </div>
-    <div class="plans" id="plans-container"></div>
-
-    <div style="margin-top:64px" class="rv">
-      <div class="label">Besoin d'aide après la livraison ?</div>
-      <h3 style="font-size:22px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.5px">Modifications ponctuelles</h3>
-      <p style="font-size:15px;color:var(--ink3);max-width:500px;margin-bottom:0;line-height:1.75">Pas de contrat, pas d'abonnement — vous me contactez quand vous avez besoin.</p>
-      <div class="mcards" id="maint-container"></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<div class="ctaband rv">
-  <div class="c">
-    <h2>Votre site en ligne<br>avant vendredi.</h2>
-    <p>Envoyez-moi votre projet — je reviens avec une proposition dans la journée.</p>
-    <button class="btn btn-v" style="font-size:15px;padding:15px 36px" onclick="go('contact')">Parler de mon projet</button>
-  </div>
-</div>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="c">
-    <div class="faq-grid">
-      <div class="rl">
-        <div class="label">FAQ</div>
-        <h2 class="h2" style="font-size:clamp(26px,4vw,40px)">Ce qu'on me<br>demande souvent.</h2>
-        <p style="font-size:15px;color:var(--ink3);margin:14px 0 28px;line-height:1.75;max-width:380px">Une autre question ? Je réponds toujours personnellement, sous 24h.</p>
-        <button class="btn btn-dark" onclick="go('contact')">Me poser une question</button>
-      </div>
-      <div class="rr">
-        <div id="faq-container"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="sec-alt">
-  <div class="c">
-    <div class="contact-grid">
-      <div class="rl">
-        <div class="label">Contact</div>
-        <h2 class="h2" style="font-size:clamp(26px,4vw,42px)" id="contact-title"></h2>
-        <p style="font-size:15px;color:var(--ink3);margin-bottom:28px;line-height:1.75;max-width:380px" id="contact-subtitle"></p>
-        <div id="contact-pills"></div>
-      </div>
-      <div class="rr">
-        <form id="cform" method="POST">
-          <div class="frow">
-            <input type="text" name="prenom" placeholder="Prénom" required>
-            <input type="text" name="nom" placeholder="Nom" required>
-          </div>
-          <input type="email" name="email" placeholder="Votre email" required>
-          <input type="text" name="activite" placeholder="Votre activité (restaurant, cabinet...)" required>
-          <select name="formule" required>
-            <option value="" disabled selected>Formule qui vous intéresse</option>
-            <option>Refonte — 99€</option>
-            <option>Création — 149€</option>
-            <option>Sur-mesure — 299€</option>
-            <option>Modification ponctuelle</option>
-            <option>Pas encore décidé</option>
-          </select>
-          <textarea name="message" placeholder="Décrivez votre projet en 2-3 lignes..."></textarea>
-          <button type="submit" class="fsubmit">Envoyer ma demande</button>
-        </form>
-        <div class="form-ok" id="formok">Merci ! Je vous réponds aujourd'hui.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="c">
-    <div class="foot">
-      <div class="flogo">GZ<b>.</b>designs</div>
-      <div class="flinks">
-        <a href="#comment">Approche</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="cgv.html">CGV</a>
-      </div>
-      <div class="fcopy">© 2025 GZ designs — Lyon</div>
-    </div>
-  </div>
-</footer>
-
+<nav><div class="nav-inner"><a href="/" class="logo" id="nav-logo">GZ<b>.</b>designs</a><div class="nav-links" id="nav-links"></div><button class="nav-cta" id="nav-cta" onclick="go('contact')"></button></div></nav>
+<section id="hero"><div class="c"><div class="hero-layout">
+  <div class="rv"><div class="hero-tag"><span class="htdot"></span><span id="hero-tag"></span></div><h1 class="hero-h1"><span id="hero-h1-1"></span><br><span id="hero-h1-2"></span><br><i id="hero-h1-3"></i></h1><p class="hero-p" id="hero-subline"></p><div class="hero-btns"><button class="btn btn-dark" id="hero-cta1" onclick="go('tarifs')"></button><button class="btn btn-ghost" id="hero-cta2" onclick="go('realisations')"></button></div></div>
+  <div class="rr"><div class="hero-img-wrap"><div class="hero-img"><img id="hero-img" src="" alt="" width="900" height="675" loading="eager"></div><div class="hf hf1"><div class="hfi"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="hft" id="hero-b1t"></div><div class="hfs" id="hero-b1s"></div></div></div><div class="hf hf2"><div class="hfi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="hft" id="hero-b2t"></div><div class="hfs" id="hero-b2s"></div></div></div></div></div>
+</div></div></section>
+<div class="targets"><div class="c"><div class="ti" id="targets-inner"></div></div></div>
+<section id="comment"><div class="c"><div class="rv"><div class="label" id="process-label"></div><h2 class="h2" id="process-title"></h2><p class="lead" id="process-subtitle"></p></div><div class="proc-grid" id="process-grid"></div></div></section>
+<section id="realisations" class="sec-alt"><div class="c">
+  <div class="rv"><div class="label" id="real-label"></div><h2 class="h2" id="real-title"></h2><p class="lead" id="real-subtitle"></p></div>
+  <div class="rv"><div class="carousel-outer"><div class="carousel-track" id="carousel-track"></div></div><div class="cnav"><div class="cdots-wrap" id="cdots"></div><div class="carrs"><button class="carr" id="cprev" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button><button class="carr" id="cnext" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button></div></div></div>
+</div></section>
+<section class="sec-alt" style="background:var(--bg2)"><div class="c">
+  <div class="why-top"><div class="rl"><div class="label" id="why-label"></div><h2 class="h2" id="why-title"></h2><p class="lead" id="why-text" style="margin-bottom:28px"></p><button class="btn btn-dark" id="why-cta" onclick="go('contact')"></button></div><div class="rr"><div class="why-img"><img id="why-img" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&auto=format&fit=crop&q=80" alt="Webdesign Lyon" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div></div></div>
+  <div class="why-cards" id="why-cards"></div>
+</div></section>
+<section id="tarifs"><div class="c">
+  <div class="rv" style="text-align:center;margin-bottom:8px"><div class="label">Tarifs</div><h2 class="h2" id="pricing-title"></h2><p class="lead" style="margin:0 auto" id="pricing-subtitle"></p></div>
+  <div class="plans" id="plans-grid"></div>
+  <div style="margin-top:64px" class="rv"><div class="label" id="maint-label"></div><h3 style="font-size:22px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.5px" id="maint-title"></h3><p style="font-size:15px;color:var(--ink3);max-width:500px;margin-bottom:0;line-height:1.75" id="maint-subtitle"></p><div class="mcards" id="maint-grid"></div></div>
+</div></section>
+<div class="ctaband rv"><div class="c"><h2 id="cta-title"></h2><p id="cta-subtitle"></p><button class="btn btn-v" style="font-size:15px;padding:15px 36px" id="cta-btn" onclick="go('contact')"></button></div></div>
+<section id="faq"><div class="c"><div class="faq-grid">
+  <div class="rl"><div class="label" id="faq-label"></div><h2 class="h2" id="faq-title" style="font-size:clamp(26px,4vw,40px)"></h2><p id="faq-subtitle" style="font-size:15px;color:var(--ink3);margin:14px 0 28px;line-height:1.75;max-width:380px"></p><button class="btn btn-dark" id="faq-cta" onclick="go('contact')"></button></div>
+  <div class="rr" id="faq-list"></div>
+</div></div></section>
+<section id="contact" class="sec-alt"><div class="c"><div class="contact-grid">
+  <div class="rl"><div class="label">Contact</div><h2 class="h2" id="contact-title" style="font-size:clamp(26px,4vw,42px)"></h2><p id="contact-subtitle" style="font-size:15px;color:var(--ink3);margin-bottom:28px;line-height:1.75;max-width:380px"></p><div id="contact-pills"></div></div>
+  <div class="rr"><form id="cform" method="POST"><div class="frow"><input type="text" name="prenom" placeholder="Prénom" required><input type="text" name="nom" placeholder="Nom" required></div><input type="email" name="email" placeholder="Votre email" required><input type="text" name="activite" placeholder="Votre activité" required><select name="formule" required id="form-select"><option value="" disabled selected>Formule qui vous intéresse</option></select><textarea name="message" placeholder="Décrivez votre projet..."></textarea><button type="submit" class="fsubmit" id="form-submit"></button></form><div class="form-ok" id="formok"></div></div>
+</div></div></section>
+<footer><div class="c"><div class="foot"><div class="flogo" id="footer-logo"></div><div class="flinks" id="footer-links"></div><div class="fcopy" id="footer-copy"></div></div></div></footer>
 <script>
-  /* ── UTILS ── */
-  function go(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
-  function setText(id,val){const el=document.getElementById(id);if(el&&val!==undefined)el.textContent=val}
-
-  /* ── FETCH ALL JSON ── */
-  async function loadContent(){
-    try{
-      const [hero,pricing,contact,meta,faq]=await Promise.all([
-        fetch('/content/hero.json').then(r=>r.json()),
-        fetch('/content/pricing.json').then(r=>r.json()),
-        fetch('/content/contact.json').then(r=>r.json()),
-        fetch('/content/meta.json').then(r=>r.json()),
-        fetch('/content/faq.json').then(r=>r.json()).catch(()=>({items:[]}))
-      ]);
-
-      /* META / SEO */
-      if(meta.title){
-        document.title=meta.title;
-        document.querySelector('meta[name="description"]').setAttribute('content',meta.description||'');
-        const og=document.querySelector('meta[property="og:title"]');
-        if(og)og.setAttribute('content',meta.title);
-      }
-
-      /* HERO */
-      setText('hero-tag', hero.tag);
-      setText('hero-h1-1', hero.h1_1);
-      setText('hero-h1-2', hero.h1_2);
-      setText('hero-h1-3', hero.h1_3);
-      setText('hero-subline', hero.subline);
-      setText('hero-b1t', hero.badge1_title);
-      setText('hero-b1s', hero.badge1_sub);
-      setText('hero-b2t', hero.badge2_title);
-      setText('hero-b2s', hero.badge2_sub);
-
-      /* PRICING */
-      setText('pricing-title', pricing.title);
-      setText('pricing-subtitle', pricing.subtitle);
-
-      const plansData=[
-        {data:pricing.plan1, mid:false},
-        {data:pricing.plan2, mid:true},
-        {data:pricing.plan3, mid:false}
-      ];
-      const feats=[
-        ['Nouveau design sur votre contenu','Mobile-first, rapide à charger','Hébergement inclus','1 aller-retour de révision'],
-        ['Site one-pager toutes sections clés','Design calé sur votre identité','Formulaire de contact intégré','Hébergement & domaine connecté','2 allers-retours de révision'],
-        ['Multi-pages selon votre brief','Animations & interactions soignées','3 allers-retours de révision','Intégration de vos photos & contenus','Formation à la gestion du site']
-      ];
-      const plansEl=document.getElementById('plans-container');
-      plansData.forEach(({data,mid},i)=>{
-        if(!data)return;
-        plansEl.innerHTML+=`
-          <div class="plan${mid?' mid':''} rv d${i+1}">
-            ${mid?'<div class="pbadge">Le plus choisi</div>':''}
-            <div class="pname">${data.name||''}</div>
-            <div class="pprice"><sup>€</sup>${data.price||''}</div>
-            <p class="pdesc">${data.desc||''}</p>
-            <ul class="pfeats">${feats[i].map(f=>`<li><span class="pck"></span>${f}</li>`).join('')}</ul>
-            <button class="${mid?'pbtn pbtn-v':'pbtn pbtn-out'}" onclick="go('contact')">${mid?'Je démarre':'Je démarre'}</button>
-          </div>`;
-      });
-
-      /* MAINTENANCE */
-      const maintEl=document.getElementById('maint-container');
-      if(pricing.maint&&Array.isArray(pricing.maint)){
-        pricing.maint.forEach(m=>{
-          maintEl.innerHTML+=`
-            <div class="mc">
-              <h4>${m.name||''}</h4>
-              <div class="mc-price">${m.price||''}€ <span>/ demande</span></div>
-              <p>${m.desc||''}</p>
-            </div>`;
-        });
-      }
-
-      /* FAQ */
-      const faqEl=document.getElementById('faq-container');
-      if(faq.items&&Array.isArray(faq.items)&&faq.items.length>0){
-        faq.items.forEach(item=>{
-          faqEl.innerHTML+=`
-            <div class="fitem">
-              <button class="fq">${item.q||''}<span class="fi">+</span></button>
-              <div class="fa">${item.a||''}</div>
-            </div>`;
-        });
-      } else {
-        /* fallback FAQ si pas de fichier faq.json */
-        const fallback=[
-          {q:'Vous faites aussi les refontes de sites existants ?',a:'Oui, c\'est même la formule la plus rapide à 99€. Nouveau design sur votre contenu existant, livré en 48h.'},
-          {q:'Je n\'ai pas de textes ni de photos prêts ?',a:'Pas de problème. Je peux rédiger une première version des textes et utiliser des photos professionnelles libres de droit.'},
-          {q:'Mon site sera-t-il visible sur Google ?',a:'Toutes les formules incluent les bases SEO : structure, titres optimisés, compatibilité mobile et chargement rapide.'},
-          {q:'Est-ce que je pourrai modifier mon site seul ?',a:'Oui. Un outil simple vous permet de changer vos textes, horaires et photos directement depuis votre navigateur.'},
-          {q:'Et si le résultat ne me convient pas ?',a:'On révise jusqu\'à ce que vous soyez content, dans la limite des allers-retours inclus dans votre formule.'}
-        ];
-        fallback.forEach(item=>{
-          faqEl.innerHTML+=`
-            <div class="fitem">
-              <button class="fq">${item.q}<span class="fi">+</span></button>
-              <div class="fa">${item.a}</div>
-            </div>`;
-        });
-      }
-
-      /* CONTACT */
-      setText('contact-title', contact.title);
-      setText('contact-subtitle', contact.subtitle);
-      const pillsEl=document.getElementById('contact-pills');
-      if(contact.pills&&Array.isArray(contact.pills)){
-        contact.pills.forEach(p=>{
-          pillsEl.innerHTML+=`<div class="cpill"><span class="cpdot"></span>${p}</div>`;
-        });
-      }
-
-      /* FORMSPREE */
-      const formId=contact.formspree_id;
-      if(formId&&formId!=='VOTRE_ID_FORMSPREE'){
-        document.getElementById('cform').action=`https://formspree.io/f/${formId}`;
-      }
-
-      /* Re-init animations après injection */
-      initAnimations();
-
-    }catch(err){
-      console.error('Erreur chargement contenu:',err);
-    }
-  }
-
-  /* ── ANIMATIONS ── */
-  function initAnimations(){
-    const io=new IntersectionObserver(e=>{
-      e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})
-    },{threshold:.1});
-    document.querySelectorAll('.rv,.rl,.rr').forEach(el=>{
-      if(!el.classList.contains('vis'))io.observe(el);
+function go(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
+function set(id,val){const el=document.getElementById(id);if(el&&val!=null)el.textContent=val}
+function html(id,val){const el=document.getElementById(id);if(el&&val!=null)el.innerHTML=val}
+const icons={lightning:'<path d="M13 10V3L4 14h7v7l9-11h-7z"/>',layers:'<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>',shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',edit:'<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>'}
+function svgIcon(n){return`<svg viewBox="0 0 24 24">${icons[n]||icons.lightning}</svg>`}
+async function loadContent(){
+  try{
+    const [meta,hero,targets,process,real,why,pricing,cta,faq,contact,footer]=await Promise.all([
+      fetch('/content/meta.json').then(r=>r.json()),
+      fetch('/content/hero.json').then(r=>r.json()),
+      fetch('/content/targets.json').then(r=>r.json()),
+      fetch('/content/process.json').then(r=>r.json()),
+      fetch('/content/realisations.json').then(r=>r.json()),
+      fetch('/content/why.json').then(r=>r.json()),
+      fetch('/content/pricing.json').then(r=>r.json()),
+      fetch('/content/cta.json').then(r=>r.json()),
+      fetch('/content/faq.json').then(r=>r.json()),
+      fetch('/content/contact.json').then(r=>r.json()),
+      fetch('/content/footer.json').then(r=>r.json())
+    ]);
+    document.title=meta.title||'GZ Designs';
+    document.querySelector('meta[name="description"]').content=meta.description||'';
+    document.querySelector('link[rel="canonical"]').href=meta.site_url||'';
+    document.querySelector('meta[property="og:title"]').content=meta.title||'';
+    document.querySelector('meta[property="og:description"]').content=meta.description||'';
+    document.getElementById('schema-org').textContent=JSON.stringify({"@context":"https://schema.org","@type":"ProfessionalService","name":"GZ Designs","description":meta.description,"url":meta.site_url,"areaServed":[{"@type":"City","name":meta.city||"Lyon"},{"@type":"Country","name":"France"}],"serviceType":["Création de site web","Refonte de site internet","Webdesign"],"priceRange":"€"});
+    set('nav-cta',hero.nav_cta||'Démarrer un projet');
+    html('nav-links','<a href="#comment">Notre approche</a><a href="#realisations">Réalisations</a><a href="#tarifs">Tarifs</a><a href="#contact">Contact</a>');
+    set('hero-tag',hero.tag);set('hero-h1-1',hero.h1_1);set('hero-h1-2',hero.h1_2);set('hero-h1-3',hero.h1_3);set('hero-subline',hero.subline);
+    set('hero-b1t',hero.badge1_title);set('hero-b1s',hero.badge1_sub);set('hero-b2t',hero.badge2_title);set('hero-b2s',hero.badge2_sub);
+    set('hero-cta1',hero.cta1||'Voir les tarifs');set('hero-cta2',hero.cta2||'Exemples de sites');
+    const hi=document.getElementById('hero-img');hi.src=hero.image||'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&auto=format&fit=crop&q=80';hi.alt=hero.image_alt||'Création de site web Lyon';
+    const ti=document.getElementById('targets-inner');ti.innerHTML=`<span class="tlbl">${targets.label||'Pour qui'}</span>`;
+    (targets.items||[]).forEach(i=>{ti.innerHTML+=`<div class="tsep"></div><span class="tchip">${i}</span>`});
+    set('process-label',process.label);set('process-title',process.title);set('process-subtitle',process.subtitle);
+    const pg=document.getElementById('process-grid');
+    (process.steps||[]).forEach((s,i)=>{pg.innerHTML+=`<div class="ps rv d${i+1}"><div class="pn">${s.num}</div><div class="pt">${s.title}</div><p class="pd">${s.desc}</p></div>`});
+    set('real-label',real.label);set('real-title',real.title);set('real-subtitle',real.subtitle);
+    const track=document.getElementById('carousel-track'),dotsWrap=document.getElementById('cdots');
+    (real.projects||[]).forEach((p,i)=>{
+      track.innerHTML+=`<div class="cslide"><div class="mock"><div class="mock-bar"><div class="mdots"><div class="md" style="background:#FF5F56"></div><div class="md" style="background:#FFBD2E"></div><div class="md" style="background:#27C93F"></div></div><div class="murl">${p.url}</div></div><img class="mock-img" src="${p.image}" alt="${p.alt}" loading="lazy"><div class="mock-info"><div><div class="mi-tag">${p.tag}</div><div class="mi-name">${p.name}</div><div class="mi-desc">${p.desc}</div></div><div class="mi-badge">${p.badge}</div></div></div></div>`;
+      const d=document.createElement('div');d.className='cdot'+(i===0?' on':'');d.onclick=()=>goTo(i);dotsWrap.appendChild(d);
     });
-  }
-
-  /* ── FAQ (délégation) ── */
-  document.addEventListener('click',e=>{
-    const btn=e.target.closest('.fq');
-    if(!btn)return;
-    const it=btn.parentElement,op=it.classList.contains('open');
-    document.querySelectorAll('.fitem').forEach(i=>i.classList.remove('open'));
-    if(!op)it.classList.add('open');
-  });
-
-  /* ── CAROUSEL ── */
-  const track=document.getElementById('track');
-  const slides=track.querySelectorAll('.cslide');
-  const dotsWrap=document.getElementById('cdots');
-  let cur=0;
-  slides.forEach((_,i)=>{
-    const d=document.createElement('div');
-    d.className='cdot'+(i===0?' on':'');
-    d.onclick=()=>goTo(i);
-    dotsWrap.appendChild(d);
-  });
-  function goTo(n){
-    cur=(n+slides.length)%slides.length;
-    track.style.transform=`translateX(-${cur*100}%)`;
-    document.querySelectorAll('.cdot').forEach((d,i)=>d.classList.toggle('on',i===cur));
-  }
-  document.getElementById('cnext').onclick=()=>goTo(cur+1);
-  document.getElementById('cprev').onclick=()=>goTo(cur-1);
-  setInterval(()=>goTo(cur+1),5000);
-
-  /* ── FORM ── */
-  document.getElementById('cform').addEventListener('submit',async e=>{
-    e.preventDefault();
-    const form=e.target;
-    if(!form.action||form.action===window.location.href){
-      alert('Formulaire non configuré — ajoutez votre ID Formspree dans le CMS.');
-      return;
-    }
-    const btn=form.querySelector('.fsubmit');
-    btn.textContent='Envoi...';btn.disabled=true;
-    try{
-      const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-      if(r.ok){form.style.display='none';document.getElementById('formok').style.display='block'}
-      else{btn.textContent='Erreur, réessayez';btn.disabled=false}
-    }catch{btn.textContent='Erreur, réessayez';btn.disabled=false}
-  });
-
-  /* ── INIT ── */
-  loadContent();
-  initAnimations();
+    let cur=0;
+    function goTo(n){const slides=track.querySelectorAll('.cslide');cur=(n+slides.length)%slides.length;track.style.transform=`translateX(-${cur*100}%)`;document.querySelectorAll('.cdot').forEach((d,i)=>d.classList.toggle('on',i===cur))}
+    document.getElementById('cnext').onclick=()=>goTo(cur+1);document.getElementById('cprev').onclick=()=>goTo(cur-1);
+    setInterval(()=>goTo(cur+1),5000);
+    set('why-label',why.label);set('why-title',why.title);set('why-text',why.text);set('why-cta',why.cta||'Parler de mon projet');
+    const wc=document.getElementById('why-cards');
+    (why.cards||[]).forEach((c,i)=>{wc.innerHTML+=`<div class="wcard rv d${i+1}"><div class="wcard-ico">${svgIcon(c.icon||'lightning')}</div><h3>${c.title}</h3><p>${c.text}</p></div>`});
+    set('pricing-title',pricing.title);set('pricing-subtitle',pricing.subtitle);
+    const pf=[pricing.plan1_feats||['Nouveau design sur votre contenu','Mobile-first, rapide à charger','Hébergement inclus','1 aller-retour de révision'],pricing.plan2_feats||['Site one-pager toutes sections clés','Design calé sur votre identité','Formulaire de contact intégré','Hébergement & domaine connecté','2 allers-retours de révision'],pricing.plan3_feats||['Multi-pages selon votre brief','Animations & interactions soignées','3 allers-retours de révision','Intégration de vos photos & contenus','Formation à la gestion du site']];
+    const pd=[{d:pricing.plan1,mid:false},{d:pricing.plan2,mid:true},{d:pricing.plan3,mid:false}];
+    const pg2=document.getElementById('plans-grid');
+    pd.forEach(({d,mid},i)=>{if(!d)return;pg2.innerHTML+=`<div class="plan${mid?' mid':''} rv d${i+1}">${mid?`<div class="pbadge">${pricing.badge||'Le plus choisi'}</div>`:''}<div class="pname">${d.name}</div><div class="pprice"><sup>€</sup>${d.price}</div><p class="pdesc">${d.desc}</p><ul class="pfeats">${pf[i].map(f=>`<li><span class="pck"></span>${f}</li>`).join('')}</ul><button class="${mid?'pbtn pbtn-v':'pbtn pbtn-out'}" onclick="go('contact')">${pricing.plan_cta||'Je démarre'}</button></div>`});
+    set('maint-label','Besoin d\'aide après la livraison ?');set('maint-title',pricing.maint_title||'Modifications ponctuelles');set('maint-subtitle',pricing.maint_subtitle||'Pas de contrat — vous me contactez quand vous avez besoin.');
+    const mg=document.getElementById('maint-grid');
+    (pricing.maint||[]).forEach(m=>{mg.innerHTML+=`<div class="mc"><h4>${m.name}</h4><div class="mc-price">${m.price}€ <span>/ demande</span></div><p>${m.desc}</p></div>`});
+    set('cta-title',cta.title);set('cta-subtitle',cta.subtitle);set('cta-btn',cta.cta||'Parler de mon projet');
+    set('faq-label',faq.label);set('faq-title',faq.title);set('faq-subtitle',faq.subtitle);set('faq-cta',faq.cta||'Me poser une question');
+    const fl=document.getElementById('faq-list');
+    (faq.items||[]).forEach(item=>{fl.innerHTML+=`<div class="fitem"><button class="fq">${item.q}<span class="fi">+</span></button><div class="fa">${item.a}</div></div>`});
+    set('contact-title',contact.title);set('contact-subtitle',contact.subtitle);
+    const cp=document.getElementById('contact-pills');
+    (contact.pills||[]).forEach(p=>{cp.innerHTML+=`<div class="cpill"><span class="cpdot"></span>${p}</div>`});
+    set('form-submit',contact.submit_label||'Envoyer ma demande');set('formok',contact.success_msg||'Merci ! Je vous réponds aujourd\'hui.');
+    const sel=document.getElementById('form-select');
+    (contact.form_options||['Refonte — 99€','Création — 149€','Sur-mesure — 299€','Modification ponctuelle','Pas encore décidé']).forEach(opt=>{sel.innerHTML+=`<option>${opt}</option>`});
+    if(contact.formspree_id&&contact.formspree_id!=='VOTRE_ID_FORMSPREE'){document.getElementById('cform').action=`https://formspree.io/f/${contact.formspree_id}`}
+    html('footer-logo','GZ<b>.</b>designs');set('footer-copy',footer.copy);
+    const flinks=document.getElementById('footer-links');
+    (footer.links||[]).forEach(l=>{flinks.innerHTML+=`<a href="${l.href}">${l.label}</a>`});
+    initAnimations();
+  }catch(err){console.error('Erreur:',err)}
+}
+function initAnimations(){
+  const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{threshold:.1});
+  document.querySelectorAll('.rv,.rl,.rr').forEach(el=>{if(!el.classList.contains('vis'))io.observe(el)});
+}
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('.fq');if(!btn)return;
+  const it=btn.parentElement,op=it.classList.contains('open');
+  document.querySelectorAll('.fitem').forEach(i=>i.classList.remove('open'));
+  if(!op)it.classList.add('open');
+});
+document.getElementById('cform').addEventListener('submit',async e=>{
+  e.preventDefault();const form=e.target;
+  if(!form.action||form.action===window.location.href){alert('Configurez votre ID Formspree dans le CMS.');return}
+  const btn=form.querySelector('.fsubmit');btn.textContent='Envoi...';btn.disabled=true;
+  try{const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(r.ok){form.style.display='none';document.getElementById('formok').style.display='block'}
+    else{btn.textContent='Erreur, réessayez';btn.disabled=false}
+  }catch{btn.textContent='Erreur, réessayez';btn.disabled=false}
+});
+loadContent();initAnimations();
 </script>
 </body>
 </html>
