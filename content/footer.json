@@ -1,0 +1,12 @@
+{
+  "logo": "GZ.designs",
+  "copy": "© 2025 GZ designs — Lyon",
+  "links": [
+    {"label": "Approche", "href": "#comment"},
+    {"label": "Réalisations", "href": "#realisations"},
+    {"label": "Tarifs", "href": "#tarifs"},
+    {"label": "FAQ", "href": "#faq"},
+    {"label": "Contact", "href": "#contact"},
+    {"label": "CGV", "href": "cgv.html"}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "label": "FAQ",
+  "title": "Ce qu'on me demande souvent.",
+  "subtitle": "Une autre question ? Je réponds toujours personnellement, sous 24h.",
+  "cta": "Me poser une question",
+  "items": [
+    {
+      "q": "Vous faites aussi les refontes de sites existants ?",
+      "a": "Oui, c'est même la formule la plus rapide à 99€. Vous m'envoyez votre site actuel, on repart sur un design moderne sans toucher à votre contenu si vous ne le souhaitez pas. Livré en 48h."
+    },
+    {
+      "q": "Je n'ai pas de textes ni de photos prêts, c'est bloquant ?",
+      "a": "Pas vraiment. Je peux vous proposer une première version des textes basée sur votre activité. Pour les photos, on peut utiliser des images professionnelles libres de droit en attendant les vôtres."
+    },
+    {
+      "q": "Mon site sera-t-il visible sur Google ?",
+      "a": "Toutes les formules incluent les bases du référencement : structure correcte, titres optimisés, compatibilité mobile et chargement rapide. Ce sont les fondations — le reste se construit avec du contenu régulier."
+    },
+    {
+      "q": "Est-ce que je pourrai modifier mon site seul ensuite ?",
+      "a": "Oui. Je connecte un outil de gestion simple qui vous permet de changer vos textes, horaires, photos directement depuis votre navigateur, sans aucune connaissance technique."
+    },
+    {
+      "q": "Et si le résultat ne me convient pas ?",
+      "a": "On révise jusqu'à ce que vous soyez content, dans la limite des allers-retours inclus dans votre formule. En pratique, le brief de départ évite les mauvaises surprises."
+    },
+    {
+      "q": "Quels sont les délais de paiement ?",
+      "a": "Pour la Refonte et la Création : 100% à la commande. Pour le Sur-mesure : 50% au démarrage, 50% à la livraison. Paiement par virement ou carte. Les détails complets sont dans les CGV."
+    }
+  ]
+}

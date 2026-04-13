@@ -1,0 +1,43 @@
+{
+  "label": "Réalisations",
+  "title": "Des sites pour des vraies activités.",
+  "subtitle": "Chaque projet part de zéro — du design jusqu'à la mise en ligne.",
+  "projects": [
+    {
+      "url": "lebarrettolyon.fr",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Site web restaurant Lyon",
+      "tag": "Restaurant",
+      "name": "Le Barreto — Lyon 2e",
+      "desc": "One-pager avec menu, réservation en ligne et accès Google Maps intégré",
+      "badge": "Création · 149€"
+    },
+    {
+      "url": "studiofightclub.fr",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Site web salle de sport Lyon",
+      "tag": "Salle de sport",
+      "name": "Studio Fight Club — Lyon 7e",
+      "desc": "Site avec planning cours, formules d'abonnement et prise de contact",
+      "badge": "Sur-mesure · 299€"
+    },
+    {
+      "url": "maison-del-barber.fr",
+      "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Site web barber shop Lyon",
+      "tag": "Barber Shop",
+      "name": "Maison Del Barber — Lyon 6e",
+      "desc": "Refonte complète avec réservation en ligne et galerie de prestations",
+      "badge": "Refonte · 99€"
+    },
+    {
+      "url": "caviste-lescarres.fr",
+      "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Site web caviste Lyon",
+      "tag": "Caviste",
+      "name": "Les Carrés — Lyon 3e",
+      "desc": "Vitrine avec catalogue vins, agenda événements et formulaire de contact",
+      "badge": "Sur-mesure · 299€"
+    }
+  ]
+}

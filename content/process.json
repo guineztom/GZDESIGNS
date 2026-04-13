@@ -1,0 +1,27 @@
+{
+  "label": "Comment ça se passe",
+  "title": "Simple du début à la fin.",
+  "subtitle": "Pas de jargon, pas de réunion interminable. Vous me parlez de votre activité, je m'occupe du reste.",
+  "steps": [
+    {
+      "num": "01 — Brief",
+      "title": "On se parle",
+      "desc": "Un échange rapide par email ou en visio pour comprendre votre activité, vos clients, ce que vous voulez transmettre."
+    },
+    {
+      "num": "02 — Design",
+      "title": "Je conçois",
+      "desc": "Je crée un design pensé pour votre secteur et votre clientèle. Pas un template générique — quelque chose qui vous ressemble."
+    },
+    {
+      "num": "03 — Révisions",
+      "title": "Vous validez",
+      "desc": "Vous donnez votre avis, on ajuste. Sur les formules Création et Sur-mesure, on a plusieurs allers-retours pour peaufiner."
+    },
+    {
+      "num": "04 — Mise en ligne",
+      "title": "C'est en ligne",
+      "desc": "Votre domaine est connecté, le site est en ligne. Je vous montre comment mettre à jour vos contenus seul si vous le souhaitez."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "label": "Pourquoi GZ Designs",
+  "title": "Ce que vous obtenez vraiment.",
+  "text": "Un site pensé pour vos clients, pas pour impressionner des jurys de design. Rapide à charger, facile à trouver sur Google, et que vous pouvez mettre à jour seul.",
+  "cta": "Parler de mon projet",
+  "cards": [
+    {
+      "title": "Rapide à charger",
+      "text": "Pas de constructeur de pages ni de plugins inutiles. Du code propre qui charge vite — vos visiteurs ne partent pas avant d'avoir vu votre contenu.",
+      "icon": "lightning"
+    },
+    {
+      "title": "Votre identité, pas un template",
+      "text": "Chaque site part de votre brief, de vos couleurs, de votre ton. Le résultat vous ressemble — et ça se voit au premier coup d'œil.",
+      "icon": "layers"
+    },
+    {
+      "title": "Hébergement fiable inclus",
+      "text": "Votre site est hébergé sur une infrastructure stable, sécurisée, et gratuite pour vous. Pas de frais cachés, pas de panne inexpliquée.",
+      "icon": "shield"
+    },
+    {
+      "title": "Autonomie après livraison",
+      "text": "Vos horaires changent, vous ajoutez un plat, vous annoncez un événement — vous le faites vous-même, depuis n'importe quel appareil, sans m'appeler.",
+      "icon": "edit"
+    }
+  ]
+}
