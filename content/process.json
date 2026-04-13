@@ -1,27 +1,27 @@
 {
-  "label": "Comment ça se passe",
-  "title": "Simple du début à la fin.",
-  "subtitle": "Pas de jargon, pas de réunion interminable. Vous me parlez de votre activité, je m'occupe du reste.",
+  "label": "Comment ça marche?",
+  "title": "Déroulement du projet",
+  "subtitle": "Un processus pensé pour être simple, rapide et adapté à vos besoins.",
   "steps": [
     {
       "num": "01 — Brief",
-      "title": "On se parle",
-      "desc": "Un échange rapide par email ou en visio pour comprendre votre activité, vos clients, ce que vous voulez transmettre."
+      "title": "Premiers échanges",
+      "desc": "Un échange rapide en physique, par email ou en visio pour comprendre votre activité, vos clients et l'identité de votre marque."
     },
     {
       "num": "02 — Design",
-      "title": "Je conçois",
-      "desc": "Je crée un design pensé pour votre secteur et votre clientèle. Pas un template générique — quelque chose qui vous ressemble."
+      "title": "Conception",
+      "desc": "Nous développons un site internet pensé pour votre secteur et votre clientèle, respectant votre charte graphique et vos contraintes."
     },
     {
-      "num": "03 — Révisions",
-      "title": "Vous validez",
-      "desc": "Vous donnez votre avis, on ajuste. Sur les formules Création et Sur-mesure, on a plusieurs allers-retours pour peaufiner."
+      "num": "03 — Itérations",
+      "title": "Validation",
+      "desc": "Vous donnez votre avis, nous ajustons le site en conséquence jusqu'aux derniers détails."
     },
     {
       "num": "04 — Mise en ligne",
-      "title": "C'est en ligne",
-      "desc": "Votre domaine est connecté, le site est en ligne. Je vous montre comment mettre à jour vos contenus seul si vous le souhaitez."
+      "title": "Publication",
+      "desc": "Votre site internet est livré déjà hébergé. Nous restons disponibles pour vous accompagner durant les 30 premiers jours suivant la mise en ligne."
     }
   ]
 }
